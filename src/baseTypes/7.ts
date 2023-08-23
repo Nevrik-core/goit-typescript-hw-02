@@ -14,13 +14,10 @@ enum WeekDay {
 }
 
 function isWeekend(day: WeekDay): boolean {
-  switch (day) {
-    case WeekDay.Saturday:
-    case WeekDay.Sunday:
-      return true;
-    default:
-      return false;
+  if (day === WeekDay.Saturday || day === WeekDay.Sunday) {
+    return true;
   }
+  return false;
 }
 
 console.log(isWeekend(WeekDay.Monday));
